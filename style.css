@@ -1,5 +1,6 @@
 body {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 html {
@@ -285,6 +286,8 @@ li {
 }
 
 .carousel-caption {
+  /* height: 40%; */
+  height: 60%;
   position: absolute;
   top: 0;
   left: 0;
@@ -296,7 +299,15 @@ li {
   align-items: center;
   background-color: transparent(0, 0, 0, 0.5); /* Customize the background color and transparency as desired */
   color: #fff; /* Customize the text color as desired */
-  padding: 20px;
+  padding: 2rem;
+}
+
+.carousel-caption h2 {
+  color: aliceblue; font-size: 3rem !important;
+}
+
+.carousel-caption p {
+  color: aliceblue; font-size: 1.4rem !important;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Quicksand&display=swap');
@@ -393,4 +404,31 @@ li {
 		margin-bottom: 60px;
 	}
 
+}
+@media screen and (max-width: 500px) {
+  .carousel-caption {
+    height: 40%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent(0, 0, 0, 0.5); /* Customize the background color and transparency as desired */
+    color: #fff; /* Customize the text color as desired */
+    padding: 2rem;
+  }
+  .carousel-caption h2{
+    font-size: 1rem !important;
+  }
+  .carousel-caption p {
+    font-size: 0.8rem !important;
+  }
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
 }
